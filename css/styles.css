@@ -1,0 +1,424 @@
+@font-face {
+    font-family: poppins;
+    src: url(../fonts/MinecraftRegular-Bmg3.otf);
+}
+
+* {
+    overflow-x: hidden;
+    text-shadow: 5px 5px 5px #1b16162f;
+}
+
+:root {
+    --pri: #35CAC4;
+    --sec: #5DD5D0;
+    --ter: #278b9a;
+    --var: 0;
+    color: white;
+    font-family: poppins;
+    scroll-behavior: smooth;
+}
+
+.block {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 30px;
+    background-image: url(../images/dirt.webp);
+    background-size: 5em;
+    overflow: hidden;
+}
+
+@media (max-width: 800px) {
+    :root {
+        font-size: 1.3em;
+    }
+}
+
+@media (min-width: 801px) {
+    :root {
+        font-size: 1.5em;
+    }
+    .block {
+        max-width: 900px;
+    }
+}
+
+@media (min-width: 2000px) {
+    :root {
+        font-size: 4em;
+    }
+    .block {
+        max-width: 1900px;
+    }
+}
+
+body {
+    background-image: url(../images/stone.jpg);
+    background-size: 5em;
+    margin: 0;
+    transition: 0.5s;
+    overflow-x: hidden;
+}
+
+#masthead {
+    margin: auto;
+    margin-top: 100px;
+    padding: 0;
+    max-width: 100% !important; 
+}
+
+/* Hide the input checkbox */
+#menu {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+    display: inline-flex;
+    color: #eae7e7;
+}
+
+#dirt {
+    height: 5em;
+    background-image: url(../images/grass2.png);
+    background-size: 5em;
+    background-position-x: 6%;
+}
+
+#facts {
+    background-image: url(../images/cave.jpg);
+    box-shadow: 5px 5px 50px #1b1616;
+    background-attachment: fixed;
+    background-size: cover;
+    max-width: 100% !important; 
+    /* border: 10px solid; */
+    /* border-image: linear-gradient(rgba(255, 0, 0, 0), rgba(0, 0, 255, 0.35)) 27 / 10px; */
+}
+
+/* Hide the menu items by default */
+#menu:not(:checked) + #portal #menuitems{
+    display: none;
+}
+
+#portal {
+    perspective: 1000px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+#menuitems {
+    display: block;
+    position: relative;
+}
+
+#menuitems a:first-letter {
+    color: #e0f1ea;
+    font-size: 1.3em;
+}
+
+#menuitems:nth-child(1) {
+    animation: 0.5s menu forwards;
+}
+
+#menuitems a {
+    margin-left: 20vw;
+}
+
+.color {
+    background-color: #282828aa;
+    padding: 30px;
+    
+}
+
+.block h2 {
+    font-size: 3em;
+    text-align: center;
+}
+
+#logo {
+    position: absolute;
+    background-attachment: fixed;
+    padding: 80px;
+}
+
+#fore {
+    perspective: 1000px;
+    background-image: url(../images/fore.png);
+    height: 30em;
+    background-size: cover;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+}
+
+header, footer {
+    background-color: var(--pri);
+}
+
+header {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/back.png);
+    box-shadow: 0px 30px 30px black;
+    margin-bottom: 60px;
+}
+
+footer {
+    margin-top: -1em;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+footer section {
+    display: block;
+}
+
+
+footer h6 {
+    margin:auto;
+    padding: auto;
+}
+
+footer p, footer form {
+    display: block;
+}
+
+footer form {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea, input {
+    border: 2px solid var(--ter);
+    background-color: var(--sec);
+    color: #195886;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+ol li {
+    list-style-type: none;
+}
+
+ol li:first-letter {
+    font-size: 1.3em;
+    color:#bdeeed;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.fadein {
+    opacity: 0;
+    -moz-transition: opacity 1.5s;
+    -webkit-transition: opacity 1.5s;
+    -o-transition: opacity 1.5s;
+    transition: opacity 1.5s;
+}
+
+.loaded {
+    opacity: 1;
+}
+
+.slidein {
+    transform: translateX(-300px);
+    /* transition: transform 1s; */
+}
+
+.slideinR {
+    transform: translateX(300px);
+    /* transition: transform 1s; */
+}
+
+.slide {
+    animation: 1s forwards 0s 1 slideInFromLeft;
+}
+
+.slideR {
+    animation: 1s forwards 0s 1 slideInFromRight;
+}
+
+.block li {
+    /* animation: 1s ease-out 0s 1 slideInFromLeft; */
+
+}
+
+section h1 {
+    text-align: center;
+}
+
+#nutrition p {
+    margin: 5px;
+    font-size: 0.5em;
+    display: inline;
+}
+
+#nutrition > span {
+    font-size: 0.9em;
+}
+
+#nutrition > span > span {
+    font-size: 1.1em;
+    color:#bdeeed;
+}
+
+#nutrition #scroller {
+    max-height: 1.5em;
+    animation: scroller 10s cubic-bezier(.47,.58,1,.67) infinite;
+    word-break: break-all;
+    overflow: hidden;
+}
+
+#nutrition #scrollerText {
+    max-height: 1.5em;
+}
+
+#products menu {
+    padding: 0px;
+}
+
+menu {
+    display: flex;
+}
+
+menu ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+menu ul > li {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+menu ul li a {
+    width: 470px;
+    height: 470px;
+    background-size: cover;
+}
+
+menu ul li {
+    transition: 0.5s;
+    box-shadow: -2px -2px 15px rgba(0, 0, 0, 0.412);
+}
+
+.itemwrapper {
+    background-color: #0e8f8922;
+    background-size: contain;
+    overflow-y: hidden;
+}
+
+.itemwrapper p {
+    display: none;
+    background-color: #1b16169a;
+    padding: 10px;
+    padding-bottom: 50px;
+}
+
+.itemwrapper:hover > p {
+    display: block;
+    position: relative;
+    animation: popup 0.3s ease forwards;
+    top: 15em;
+}
+
+menu ul li:hover {
+    background-size: 101% !important;
+    background-position: 90%;
+}
+
+menu ul li {
+    background-size: 100%
+}
+
+#item1 {
+    background-image: url(../images/java.avif);
+}
+
+#item2 {
+    background-image: url(../images/dungeons.avif);
+}
+
+#item3 {
+    background-image: url(../images/legends.avif);
+}
+
+#item4 {
+    background-image: url(../images/education.avif);
+}
+
+@keyframes drop {
+    0% {
+        transform: scaleX(100%) translateX(0%);
+    }
+    50% {
+        transform: scaleX(150%) translateX(0%);
+    }
+    100% {
+        transform: scaleX(100%) translateX(0%);
+    }
+}
+
+@keyframes menu {
+    0% {
+        left: -1000px;
+        transform: scale(0.2);
+    }
+    100% {
+        transform: scaleX(1);
+        left: 0px;
+        
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scroller {
+    0% {
+        margin-left: 100%;
+    }
+    100% {
+        margin-left: -1050px;
+    }
+}
+
+@keyframes popup {
+    0% {
+        top: 20em;
+    }
+    100% {
+        top: 65%;
+    }
+}
