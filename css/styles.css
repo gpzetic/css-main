@@ -73,31 +73,10 @@ body {
     max-width: 100% !important; 
 }
 
-/* Hide the input checkbox */
-#menu {
-    display: none;
-}
-
 label {
     cursor: pointer;
     display: inline-flex;
     color: #eae7e7;
-}
-
-#dirt {
-    height: 5em;
-    background-image: url(../images/grass2.png);
-    background-size: 5em;
-    background-position-x: 6%;
-}
-
-#dirty {
-    height: 5em;
-    background-image: url(../images/grassy.webp);
-    background-size: 5em;
-    background-position-x: 6%;
-    box-shadow: -4px -4px 40px black;
-    margin-top: 100px;
 }
 
 #facts {
@@ -110,20 +89,59 @@ label {
     /* border-image: linear-gradient(rgba(255, 0, 0, 0), rgba(0, 0, 255, 0.35)) 27 / 10px; */
 }
 
-#java {
-    background-image: url(../images/javaBackground.png);
+#timeline {
+    margin: auto;
+    height: 50%;
+    width: fit-content;
+    box-shadow: -4px -4px 40px black;
+}
+
+/**
+
+Products styling
+
+*/
+
+.product {
     box-shadow: 5px 5px 50px #1b1616;
     background-attachment: fixed;
     background-size: cover;
     max-width: 100% !important; 
 }
 
-/* Hide the menu items by default */
-#menu:not(:checked) + #portal #menuitems{
+#java {
+    background-image: url(../images/javaBackground.png);
+}
+
+#dungeons {
+    background-image: url(../images/dungeonsBackground.png);
+}
+
+#legends {
+    background-image: url(../images/legendsBackground.avif);
+}
+
+#education {
+    background-image: url(../images/educationBackground.webp);
+}
+
+/**
+
+Navigation Menu
+
+*/
+
+/* Hide the input checkbox */
+#menu {
     display: none;
 }
 
+#menu:checked  {
+    top:1000px
+}
+
 #portal {
+    display: block;
     perspective: 1000px;
     overflow: hidden;
     margin: 0;
@@ -131,8 +149,11 @@ label {
 }
 
 #menuitems {
-    display: block;
     position: relative;
+}
+
+header ul {
+    font-family: minecraft;
 }
 
 #menuitems a:first-letter {
@@ -140,12 +161,72 @@ label {
     font-size: 1.3em;
 }
 
-#menuitems:nth-child(1) {
+#menuitems a:hover {
+    color: #a9abbb;
+} 
+
+#menuitems {
     animation: 0.5s menu forwards;
 }
 
 #menuitems a {
-    margin-left: 20vw;
+    transition: 0.5s;
+    margin-left: 13vw;
+}
+
+label {
+    overflow: hidden;
+}
+
+/* Styling the menu button */
+.menu-btn {
+    right: 35px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+
+/* Styling the hamburger lines */
+.menu-btn .btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: black;
+    transition: all 0.5s ease-out;
+}
+
+/* Adding transform to the X */
+#menu:checked .menu-btn {
+    transform: rotate(180deg);
+}
+
+/* Styling the three lines to make it an X */
+#menu:checked .menu-btn .btn-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#menu:checked .menu-btn .btn-line:nth-child(2) {
+    opacity: 0;
+}
+
+#menu:checked .menu-btn .btn-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+.nav-item:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.nav-item:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.nav-item:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.nav-item:nth-child(4) {
+    transition-delay: 0.4s;
 }
 
 .color {
@@ -164,7 +245,10 @@ label {
     position: absolute;
     background-attachment: fixed;
     padding: 80px;
-    
+}
+
+#logocontainer {
+    margin-bottom: -200px;
 }
 
 #fore {
@@ -190,6 +274,21 @@ header {
     margin-bottom: 60px;
 }
 
+header h1 {
+    margin: 0;
+    padding: -100px;
+    z-index: 3;
+    overflow: visible;
+}
+
+#aboutHeader {
+    background-image: url(../images/wallpaper_minecraft_cats_pandas_2560x1440.png);
+}
+
+#about {
+    background-image: url(../images/wild.webp);
+}
+
 footer {
     margin-top: -1em;
     display: flex;
@@ -211,12 +310,23 @@ footer h6 {
     padding: auto;
 }
 
+#toTop {
+    width: 3em;
+    height: 3em;
+    background: url(../images/dirty.webp);
+    border: 4px solid #2a2929;
+    content: "^";
+    position: absolute;
+    left: 20px;
+    margin-bottom: 50px;
+}
+
 form {
     display: block;
     text-align: center;
 }
 
-input {
+input, textarea {
     border: 2px solid var(--pri);
     background-color: var(--sec);
     color: white;
@@ -227,8 +337,14 @@ input {
     transition: 0.4s;
 }
 
+textarea {
+    margin: 0;
+    margin-top: 20px;
+}
+
 input:hover {
     border: 2px solid var(--ter);
+    background-color: #204d3a78;
 }
 
 ul li {
@@ -249,45 +365,14 @@ a {
     text-decoration: none;
 }
 
-.fadein {
-    opacity: 0;
-    -moz-transition: opacity 1.5s;
-    -webkit-transition: opacity 1.5s;
-    -o-transition: opacity 1.5s;
-    transition: opacity 1.5s;
-}
-
-.loaded {
-    opacity: 1;
-}
-
-.slidein {
-    transform: translateX(-300px);
-    /* transition: transform 1s; */
-}
-
-.slideinR {
-    transform: translateX(300px);
-    /* transition: transform 1s; */
-}
-
-.slide {
-    animation: 1s forwards 0s 1 slideInFromLeft;
-}
-
-.slideR {
-    animation: 1s forwards 0s 1 slideInFromRight;
-}
-
-.block li {
-    /* animation: 1s ease-out 0s 1 slideInFromLeft; */
-
-}
-
 h1 {
     font-family: minecraft;
     text-align: center;
     font-size: 8em;
+}
+
+h1, h2 {
+    text-shadow: #5d647a 0 4px;
 }
 
 section h1 {
@@ -304,15 +389,6 @@ section h1 {
     margin: 5px;
     font-size: 0.5em;
     display: inline;
-}
-
-#nutrition > span {
-    font-size: 2em;
-}
-
-#nutrition > span > span {
-    font-size: 1.1em;
-    color:#bdeeed;
 }
 
 #nutrition #scroller {
@@ -359,7 +435,19 @@ menu ul li a {
 
 menu ul li {
     transition: 0.5s;
+    background-size: 100%;
     box-shadow: -2px -2px 15px rgba(0, 0, 0, 0.412);
+}
+
+menu ul li:hover {
+    background-size: 101% !important;
+    background-position: 90%;
+}
+
+.noBack {
+    box-shadow: none;
+    background: none;
+    text-align: center;
 }
 
 .itemwrapper {
@@ -382,13 +470,36 @@ menu ul li {
     top: 15em;
 }
 
-menu ul li:hover {
-    background-size: 101% !important;
-    background-position: 90%;
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
-menu ul li {
-    background-size: 100%
+.noflex {
+    display: block;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.download {
+    text-align: center;
+    border-top: 4px solid #d6dceb;
+    border-bottom: 4px solid #d6dceb;
+    padding: 25px 50px;
+    font-size: 1.3em;
+    background-color:#a9abbb;
+    color:#3d3f66;
+    font-family: minecraft;
+    margin: auto;
+    transition: 0.4s;
+}
+
+.download:hover {
+    color:white;
+    background-color:  #2c2f39;
+    border-top: 4px solid #10111f;
+    border-bottom: 4px solid #10111f;
 }
 
 #item1 {
@@ -405,6 +516,53 @@ menu ul li {
 
 #item4 {
     background-image: url(../images/education.avif);
+}
+
+/**
+
+Misc bars
+
+*/
+
+#dirt {
+    height: 5em;
+    background-image: url(../images/grass2.png);
+    background-size: 5em;
+    background-position-x: 6%;
+    z-index: 2;
+}
+
+#dirty {
+    height: 5em;
+    background-image: url(../images/grassy.webp);
+    background-size: 5em;
+    background-position-x: 6%;
+    box-shadow: -4px -4px 40px black;
+    margin-top: 100px;
+}
+
+/**
+
+Animations
+
+*/
+
+.slidein {
+    transform: translateX(-300px);
+    /* transition: transform 1s; */
+}
+
+.slideinR {
+    transform: translateX(300px);
+    /* transition: transform 1s; */
+}
+
+.slide {
+    animation: 1s forwards 0s 1 slideInFromLeft;
+}
+
+.slideR {
+    animation: 1s forwards 0s 1 slideInFromRight;
 }
 
 @keyframes drop {
@@ -468,5 +626,18 @@ menu ul li {
     }
     100% {
         top: 68%;
+    }
+}
+
+@keyframes jump {
+    0% {z-index: 3;}
+    70% {
+        bottom: 500px;
+        z-index: -1;
+    }
+
+    100% {
+        bottom: 300px;
+        z-index: -1;
     }
 }
