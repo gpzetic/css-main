@@ -36,7 +36,10 @@
 
 @media (max-width: 800px) {
     :root {
-        font-size: 1.3em;
+        font-size: 1em;
+    }
+    .block {
+        background-size: auto;
     }
 }
 
@@ -409,6 +412,7 @@ section h1 {
 
 menu {
     display: flex;
+    padding-inline-start: 0px;
 }
 
 menu ul {
