@@ -426,9 +426,10 @@ menu ul > li {
 }
 
 menu ul li a {
-    width: 470px;
-    height: 470px;
+    width: 20em;
+    height: 20em;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 menu ul li {
@@ -449,7 +450,7 @@ menu ul li:hover {
 }
 
 .itemwrapper {
-    background-color: #0e8f8922;
+    background-color: #27454422;
     background-size: contain;
     overflow-y: hidden;
 }
@@ -545,14 +546,16 @@ Animations
 
 */
 
-.slidein {
-    transform: translateX(-300px);
-    /* transition: transform 1s; */
-}
-
-.slideinR {
-    transform: translateX(300px);
-    /* transition: transform 1s; */
+@media (min-width: 800px) {
+    .slidein {
+        transform: translateX(-300px);
+        /* transition: transform 1s; */
+    }
+    
+    .slideinR {
+        transform: translateX(300px);
+        /* transition: transform 1s; */
+    }   
 }
 
 .slide {
