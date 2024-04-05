@@ -276,7 +276,6 @@ header {
 
 header h1 {
     margin: 0;
-    padding: -100px;
     z-index: 3;
     overflow: visible;
 }
@@ -307,7 +306,6 @@ footer section {
 
 footer h6 {
     margin:auto;
-    padding: auto;
 }
 
 #toTop {
@@ -563,18 +561,6 @@ Animations
 
 .slideR {
     animation: 1s forwards 0s 1 slideInFromRight;
-}
-
-@keyframes drop {
-    0% {
-        transform: scaleX(100%) translateX(0%);
-    }
-    50% {
-        transform: scaleX(150%) translateX(0%);
-    }
-    100% {
-        transform: scaleX(100%) translateX(0%);
-    }
 }
 
 @keyframes menu {
