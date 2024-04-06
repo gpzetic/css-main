@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Grayson Zetic">
         <meta name="description" content="Minecraft Website">
+        <meta name="robots" content="follow, index">
         <title>Home | Minecraft</title>
         <link rel="stylesheet" href="css/styles.css">
         <script src="js/script.js" defer></script>
@@ -17,12 +18,12 @@
                         <div id="portal">
                             <label>
                                 <input type="checkbox" id="menu">
-                                <div class="menu-btn">
-                                    <div class="btn-line"></div>
-                                    <div class="btn-line"></div>
-                                    <div class="btn-line"></div>
-                                </div>
-                                <div id="menuitems">
+                                <span class="menu-btn">
+                                    <figure class="btn-line"></figure>
+                                    <figure class="btn-line"></figure>
+                                    <figure class="btn-line"></figure>
+                                </span>
+                                <span id="menuitems">
                                     <a href="index.html">
                                         Home
                                     </a>
@@ -35,25 +36,25 @@
                                     <a href="contact.html">
                                         Contact
                                     </a>
-                                </div> 
+                                </span> 
                             </label>
                         </div>
                     </li>
                 </ul>
             </div>
             <div>
-                <section id="logo">
+                <div id="logo">
                     <img src="images/mc.png" alt="Minecraft Logo">
-                </section>
+                </div>
             </div>
-            <section id="fore"></section>
+            <div id="fore"></div>
             <div id="dirt"></div>
         </header>
-        <section aria-label="Download Section">
-            <section id="masthead" class="block">
+        <div aria-label="Download Section">
+            <div id="masthead" class="block">
                 <section id="downloads" class="color">
                     <h2>Download Now</h2>
-                    <menu>
+                    <div class="items">
                         <ul>
                             <li class="slidein" id="item1">
                                 <a class="itemwrapper" href="products.html#java">
@@ -76,37 +77,37 @@
                                 </a>
                             </li>
                         </ul>
-                    </menu>
+                    </div>
                 </section>
-            </section>
-        </section>
+            </div>
+        </div>
         <br>
-        <section class="block" id="indexAbout" aria-label="About Minecraft">
+        <div class="block" id="indexAbout" aria-label="About Minecraft">
             <section class="color">
                 <h2 class="slidein">About</h2>
-                <section class="slidein">
-                    <section id="scroller">
+                <div class="slidein">
+                    <div id="scroller">
                         <p id="scrollerText">
                             The first version of Minecraft was created in just six days.
                             Minecraft wasn't deemed complete for another two years.
                             Creepers began as a coding error. --------------------
                         </p>
-                    </section>
-                </section>         
+                    </div>
+                </div>         
                 <h6 class="slidein" id="para">
                     Enter the boundless world of Minecraft - where imagination reigns supreme and every block holds the potential for endless adventure. Dive into a universe where creativity knows no bounds and exploration knows no limits. Welcome to the Minecraft Games, where every pixel tells a story and every player is a pioneer of their own digital frontier.
                 </h6>
                 <button class="download" onclick="window.location='about.html'">Learn More</button>
             </section>
-        </section>
+        </div>
         <br>
         
         <div id="dirty"></div>
         <footer>
             <!-- <div id="toTop"></div> -->
-            <section>
+            <div>
                 <p class="slidein"><small>2024 &copy; All rights and lefts reserved</small></p>    
-            </section>
+            </div>
         </footer>
     </body>
 </html>
