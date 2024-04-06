@@ -17,11 +17,9 @@
     --pri: #282828aa;
     --sec: #282828aa;
     --ter: #35CE8D;
-    --var: 0;
     color: white;
     font-family: poppins;
     scroll-behavior: smooth;
-    --scale: 0.01;
 }
 
 .block {
@@ -32,33 +30,6 @@
     background-image: url(../images/dirt.webp);
     background-size: 5em;
     overflow: hidden;
-}
-
-@media (max-width: 800px) {
-    :root {
-        font-size: 1em;
-    }
-    .block {
-        background-size: auto;
-    }
-}
-
-@media (min-width: 801px) {
-    :root {
-        font-size: 1.5em;
-    }
-    .block {
-        max-width: 900px;
-    }
-}
-
-@media (min-width: 2000px) {
-    :root {
-        font-size: 4em;
-    }
-    .block {
-        max-width: 1900px;
-    }
 }
 
 body {
@@ -83,18 +54,37 @@ label {
 }
 
 #facts {
+    background-image: url(../images/water.webp);
+    box-shadow: 5px 5px 50px #1b1616;
+    background-attachment: fixed;
+    background-size: 100%;
+    max-width: 70%; 
+    background-position: bottom;
+}
+
+#facts li {
+    width: 80%;
+    margin: auto;
+    overflow-x: visible;
+    margin-top: 10px;
+    text-shadow: 1px 1px 4px black;
+}
+
+#facts ol {
+    list-style-type: decimal;
+}
+
+#downloads {
     background-image: url(../images/cave.jpg);
     box-shadow: 5px 5px 50px #1b1616;
     background-attachment: fixed;
     background-size: cover;
     max-width: 100% !important; 
-    /* border: 10px solid; */
-    /* border-image: linear-gradient(rgba(255, 0, 0, 0), rgba(0, 0, 255, 0.35)) 27 / 10px; */
 }
 
 #timeline {
     margin: auto;
-    height: 50%;
+    height: 35em;
     width: fit-content;
     box-shadow: -4px -4px 40px black;
 }
@@ -139,12 +129,7 @@ Navigation Menu
     display: none;
 }
 
-#menu:checked  {
-    top:1000px
-}
-
 #portal {
-    display: block;
     perspective: 1000px;
     overflow: hidden;
     margin: 0;
@@ -152,7 +137,13 @@ Navigation Menu
 }
 
 #menuitems {
+    animation: 0.5s menu forwards;
     position: relative;
+    display: none;
+}
+
+#menu:checked ~ #menuitems {
+    display: block;
 }
 
 header ul {
@@ -164,24 +155,19 @@ header ul {
     font-size: 1.3em;
 }
 
-#menuitems a:hover {
-    color: #a9abbb;
-} 
-
-#menuitems {
-    animation: 0.5s menu forwards;
-}
-
 #menuitems a {
     transition: 0.5s;
     margin-left: 13vw;
 }
 
+#menuitems a:hover {
+    color: #a9abbb;
+} 
+
 label {
     overflow: hidden;
 }
 
-/* Styling the menu button */
 .menu-btn {
     right: 35px;
     padding: 10px;
@@ -189,30 +175,27 @@ label {
     transition: all 0.5s ease-out;
 }
 
-/* Styling the hamburger lines */
 .menu-btn .btn-line {
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: black;
+    background: rgb(255, 255, 255);
     transition: all 0.5s ease-out;
 }
 
-/* Adding transform to the X */
-#menu:checked .menu-btn {
-    transform: rotate(180deg);
+#menu:checked + .menu-btn {
+    transform: rotate(180deg) translateY(5px);
 }
 
-/* Styling the three lines to make it an X */
-#menu:checked .menu-btn .btn-line:nth-child(1) {
+#menu:checked + .menu-btn .btn-line:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
 
-#menu:checked .menu-btn .btn-line:nth-child(2) {
+#menu:checked + .menu-btn .btn-line:nth-child(2) {
     opacity: 0;
 }
 
-#menu:checked .menu-btn .btn-line:nth-child(3) {
+#menu:checked + .menu-btn .btn-line:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -6px);
 }
 
@@ -247,11 +230,15 @@ label {
 #logo {
     position: absolute;
     background-attachment: fixed;
-    padding: 80px;
+    padding: 2em;
+}
+
+#logo img {
+    width: 100%;
 }
 
 #logocontainer {
-    margin-bottom: -200px;
+    margin-bottom: -9em;
 }
 
 #fore {
@@ -352,15 +339,6 @@ ul li {
     list-style-type: none;
 }
 
-ol li {
-    list-style-type: none;
-}
-
-ol li:first-letter {
-    font-size: 1.3em;
-    color:#bdeeed;
-}
-
 a {
     color: white;
     text-decoration: none;
@@ -380,19 +358,19 @@ section h1 {
     text-align: center;
 }
 
-#nutrition {
+#indexAbout {
     background-image: url(../images/facts2.png);
     background-size: 100%;
     background-attachment: fixed;
 }
 
-#nutrition p {
+#indexAbout p {
     margin: 5px;
     font-size: 0.5em;
     display: inline;
 }
 
-#nutrition #scroller {
+#indexAbout #scroller {
     max-height: 1.5em;
     animation: scroller 15s cubic-bezier(.47,.58,1,.67) infinite;
     word-break: break-all;
@@ -433,12 +411,12 @@ menu ul li a {
     width: 20em;
     height: 20em;
     background-size: cover;
-    background-repeat: no-repeat;
 }
 
 menu ul li {
     transition: 0.5s;
     background-size: 100%;
+    background-repeat: no-repeat;
     box-shadow: -2px -2px 15px rgba(0, 0, 0, 0.412);
 }
 
@@ -455,7 +433,7 @@ menu ul li:hover {
 
 .itemwrapper {
     background-color: #27454422;
-    background-size: contain;
+    background-repeat: no-repeat;
     overflow-y: hidden;
 }
 
@@ -550,16 +528,54 @@ Animations
 
 */
 
-@media (min-width: 800px) {
+/***** PHONE *****/
+@media (max-width: 1000px) {
+    :root {
+        font-size: 1.5em;
+    }
+
+    h1, h2 {
+        font-size: 1em;
+    }
+
+    .block {
+        background-size: auto;
+    }
+
     .slidein {
         transform: translateX(-300px);
-        /* transition: transform 1s; */
     }
     
     .slideinR {
         transform: translateX(300px);
-        /* transition: transform 1s; */
     }   
+    #menu li {
+        padding: 15px;
+        background-color: #10111f;
+        border: 2px solid black;
+    }
+}
+
+/***** NORMAL COMPUTER *****/
+@media (min-width: 1001px) {
+    :root {
+        font-size: 1.5em;
+    }
+
+    .block {
+        max-width: 900px;
+    }
+}
+
+/***** LARGE COMPUTER *****/
+@media (min-width: 2000px) {
+    :root {
+        font-size: 4em;
+    }
+
+    .block {
+        max-width: 1900px;
+    }
 }
 
 .slide {
@@ -575,10 +591,10 @@ Animations
         left: -1000px;
         transform: scale(0.2);
     }
+
     100% {
         transform: scaleX(1);
         left: 0px;
-        
     }
 }
 
@@ -587,6 +603,7 @@ Animations
         opacity: 0;
         transform: translateX(-100%);
     }
+
     100% {
         opacity: 1;
         transform: translateX(0);
@@ -598,6 +615,7 @@ Animations
         opacity: 0;
         transform: translateX(100%);
     }
+
     100% {
         opacity: 1;
         transform: translateX(0);
@@ -608,6 +626,7 @@ Animations
     0% {
         margin-left: 100%;
     }
+
     100% {
         margin-left: -1050px;
     }
@@ -617,6 +636,7 @@ Animations
     0% {
         top: 20em;
     }
+
     100% {
         top: 68%;
     }

@@ -11,51 +11,74 @@
     </head>
     <body>
         <header aria-label="Header" id="aboutHeader">
-            <ul>
-                <li>
-                    <label>
-                        <input type="checkbox" id="menu">
-                        Menu
+            <div id="menulist">
+                <ul>
+                    <li>
                         <div id="portal">
-                            <div id="menuitems">
-                                <a href="index.html">
-                                    Home
-                                </a>
-                                <a href="about.html">
-                                    About
-                                </a>
-                                <a href="products.html">
-                                    Products
-                                </a>
-                                <a href="contact.html">
-                                    Contact
-                                </a>
-                            </div> 
+                            <label>
+                                <input type="checkbox" id="menu">
+                                <div class="menu-btn">
+                                    <div class="btn-line"></div>
+                                    <div class="btn-line"></div>
+                                    <div class="btn-line"></div>
+                                </div>
+                                <div id="menuitems">
+                                    <a href="index.html">
+                                        Home
+                                    </a>
+                                    <a href="about.html">
+                                        About
+                                    </a>
+                                    <a href="products.html">
+                                        Products
+                                    </a>
+                                    <a href="contact.html">
+                                        Contact
+                                    </a>
+                                </div> 
+                            </label>
                         </div>
-                    </label>
-                </li>
-            </ul>
+                    </li>
+                </ul>
+            </div>
             <div id="logocontainer">
                 <h1>About</h1>
             </div>
             <section id="fore"></section>
             <div id="dirt"></div>
         </header>
-        <section aria-label="About">
+        <section aria-label="Timeline">
             <section id="masthead" class="block">
                 <section id="about" class="color product">
-                    <h2>History</h2>
+                    <h2>Timeline</h2>
                     <div id="timeline">
                         <img src="images/timeline.png" alt="Minecraft Timeline">
                     </div>
                 </section>
             </section>
         </section>
+        <br><br>
+        <div aria-label="Facts">
+            <div id="facts" class="block">
+                <h2>Facts</h2>
+                <ol>
+                    <li>
+                        Minecraft is a 2011 sandbox game developed by Mojang Studios and originally released in 2009. 
+                    </li>
+                    <li>
+                        The game was created by Markus "Notch" Persson in the Java programming language.
+                    </li>
+                    <li>
+                        Minecraft is a 3D sandbox game that has no required goals to accomplish, allowing players a large amount of freedom in choosing how to play the game.
+                    </li>
+                </ol>
+            </div>
+        </div>
         <div id="dirty"></div>
         <footer>
-            <section>
+            <div>
                 <p class="slidein"><small>2024 &copy; All rights and lefts reserved</small></p>    
-            </section>
+            </div>
         </footer>
     </body>
 </html>
