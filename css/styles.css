@@ -17,7 +17,6 @@
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
-    padding: 30px;
     background-image: url(../images/dirt.webp);
     background-size: 5em;
     overflow: hidden;
@@ -209,8 +208,11 @@ label {
 
 .color {
     background-color: #000000a0;
-    padding: 30px;
     
+}
+
+p {
+    min-width: 10%;
 }
 
 .block h2 {
