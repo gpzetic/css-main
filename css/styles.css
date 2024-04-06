@@ -169,6 +169,7 @@ label {
 }
 
 .menu-btn {
+    z-index: 999;
     right: 35px;
     padding: 10px;
     cursor: pointer;
@@ -235,10 +236,6 @@ label {
 
 #logo img {
     width: 100%;
-}
-
-#logocontainer {
-    margin-bottom: -9em;
 }
 
 #fore {
@@ -531,11 +528,15 @@ Animations
 /***** PHONE *****/
 @media (max-width: 1000px) {
     :root {
-        font-size: 1.5em;
+        font-size: 5vw;
     }
 
-    h1, h2 {
-        font-size: 1em;
+    h1 {
+        font-size: 15vw;
+    }
+
+    .block {
+        background-size: 150% !important; 
     }
 
     .block {
@@ -549,10 +550,15 @@ Animations
     .slideinR {
         transform: translateX(300px);
     }   
+
     #menu li {
         padding: 15px;
         background-color: #10111f;
         border: 2px solid black;
+    }
+    
+    img {
+        transform: scale(0.6);
     }
 }
 
@@ -564,6 +570,10 @@ Animations
 
     .block {
         max-width: 900px;
+    }
+
+    #logocontainer {
+        margin-bottom: -9em;
     }
 }
 
