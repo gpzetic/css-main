@@ -535,6 +535,10 @@ Animations
         font-size: 15vw;
     }
 
+    h2 {
+        line-break: anywhere;
+    }
+
     .block {
         background-size: 150% !important; 
     }
@@ -558,7 +562,7 @@ Animations
     }
     
     img {
-        transform: scale(0.6);
+        width: 100%;
     }
 }
 
