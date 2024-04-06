@@ -177,8 +177,9 @@ label {
 }
 
 .menu-btn .btn-line {
-    width: 28px;
-    height: 3px;
+    width: 28px !important;
+    height: 3px !important;
+    overflow: visible;
     margin: 0 0 5px 0;
     background: rgb(255, 255, 255);
     transition: all 0.5s ease-out;
