@@ -1,12 +1,4 @@
-@font-face {
-    font-family: poppins;
-    src: url(../fonts/MinecraftRegular-Bmg3.otf);
-}
 
-@font-face {
-    font-family: minecraft;
-    src: url(../fonts/MinecraftTen.woff);
-}
 
 * {
     overflow-x: hidden;
@@ -18,7 +10,6 @@
     --sec: #282828aa;
     --ter: #35CE8D;
     color: white;
-    font-family: poppins;
     scroll-behavior: smooth;
 }
 
@@ -147,12 +138,11 @@ Navigation Menu
 }
 
 header ul {
-    font-family: minecraft;
 }
 
 #menuitems a:first-letter {
     color: #e0f1ea;
-    font-size: 1.3em;
+    .itemssize: 1.3em;
 }
 
 #menuitems a {
@@ -224,8 +214,8 @@ label {
 }
 
 .block h2 {
-    font-family: minecraft;
-    font-size: 3em;
+    .itemsfamily: minecraft;
+    .itemssize: 3em;
     text-align: center;
 }
 
@@ -316,8 +306,8 @@ input, textarea {
     border: 2px solid var(--pri);
     background-color: var(--sec);
     color: white;
-    font-size: large;
-    font-family: minecraft;
+    .itemssize: large;
+    .itemsfamily: minecraft;
     margin: 20px;
     padding: 15px;
     transition: 0.4s;
@@ -343,9 +333,9 @@ a {
 }
 
 h1 {
-    font-family: minecraft;
+    .itemsfamily: minecraft;
     text-align: center;
-    font-size: 8em;
+    .itemssize: 8em;
 }
 
 h1, h2 {
@@ -364,7 +354,7 @@ section h1 {
 
 #indexAbout p {
     margin: 5px;
-    font-size: 0.5em;
+    .itemssize: 0.5em;
     display: inline;
 }
 
@@ -374,12 +364,12 @@ section h1 {
     word-break: break-all;
     overflow: hidden;
     letter-spacing: 2px;
-    font-size: 1.5em;
+    .itemssize: 1.5em;
 }
 
 #para {
-    font-weight: normal;
-    font-size: 1em;
+    .itemsweight: normal;
+    .itemssize: 1em;
 }
 
 #products .items {
@@ -466,10 +456,10 @@ section h1 {
     border-top: 4px solid #d6dceb;
     border-bottom: 4px solid #d6dceb;
     padding: 25px 50px;
-    font-size: 1.3em;
+    .itemssize: 1.3em;
     background-color:#a9abbb;
     color:#3d3f66;
-    font-family: minecraft;
+    .itemsfamily: minecraft;
     margin: auto;
     transition: 0.4s;
 }
@@ -529,11 +519,11 @@ Animations
 /***** PHONE *****/
 @media (max-width: 1000px) {
     :root {
-        font-size: 5vw;
+        .itemssize: 5vw;
     }
 
     h1 {
-        font-size: 15vw;
+        .itemssize: 15vw;
     }
 
     h2 {
@@ -570,7 +560,7 @@ Animations
 /***** NORMAL COMPUTER *****/
 @media (min-width: 1001px) {
     :root {
-        font-size: 1.5em;
+        .itemssize: 1.5em;
     }
 
     .block {
@@ -585,7 +575,7 @@ Animations
 /***** LARGE COMPUTER *****/
 @media (min-width: 2000px) {
     :root {
-        font-size: 4em;
+        .itemssize: 4em;
     }
 
     .block {
