@@ -7,7 +7,7 @@ const startAnimation = (entries, observer) => {
         entry.target.classList.toggle("slide", entry.isIntersecting);
     });
 };
-
+// taken from https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
 const observer = new IntersectionObserver(startAnimation);
 const options = { root: null, rootMargin: '0px', threshold: 100 }; 
 
@@ -34,36 +34,3 @@ window.addEventListener('scroll', function() {
         scrollImage.style.transform = `translateY(${translateY}px)`;
     }
 });
-//   // Select dom items
-// const menuBtn = 
-//   document.querySelector(".menu-btn");
-
-// const menuNav = 
-//   document.querySelector("#portal");
-
-// const navItems = 
-//   document.querySelectorAll(".nav-item");
-
-// // Set the initial state of the menu
-// let showMenu = false;
-
-// menuBtn.addEventListener("click", toggleMenu);
-// function toggleMenu() {
-//     if (!showMenu) {
-//         menuBtn.classList.add("close");
-//         menuNav.classList.add("show");
-//         navItems.forEach((item) =>
-//             item.classList.add("show"));
-
-//         // Reset the menu state
-//         showMenu = true;
-//     } else {
-//         menuBtn.classList.remove("close");
-//         menuNav.classList.remove("show");
-//         navItems.forEach((item) =>
-//             item.classList.remove("show"));
-
-//         // Reset the menu state
-//         showMenu = false;
-//     }
-// }
